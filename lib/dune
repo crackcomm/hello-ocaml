@@ -1,4 +1,6 @@
 (library
-  (name lib)
-  (public_name hello-ocaml)
-  (libraries lambda-term lwt))
+  (name hello_ocaml_lib)
+  (public_name hello-ocaml.lib)
+  (js_of_ocaml
+    (flags --pretty --source-map --noinline))
+  (libraries js_of_ocaml))

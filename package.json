@@ -17,13 +17,17 @@
     "test": "esy x hello"
   },
   "dependencies": {
-    "@opam/dune": "*",
-    "@opam/lambda-term": "*",
-    "@opam/lwt": "^4.0.0",
-    "ocaml": "~4.6.0"
+    "@opam/containers": "2.8.1",
+    "@opam/gen_js_api": "1.0.6",
+    "@opam/dune": "2.7.0",
+    "@opam/js_of_ocaml": "3.7.0",
+    "@opam/js_of_ocaml-ppx": "3.7.0",
+    "@opam/js_of_ocaml-compiler": "3.7.1",
+    "@reason-native/console": "0.1.0",
+    "ocaml": "~4.10.0"
   },
   "devDependencies": {
     "@opam/merlin": "^3.0.3",
-    "ocaml": "~4.6.0"
+    "ocaml": "~4.10.0"
   }
 }
