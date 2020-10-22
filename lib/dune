@@ -1,6 +1,6 @@
 (library
-  (name hello_ocaml_lib)
-  (public_name hello-ocaml.lib)
-  (js_of_ocaml
-    (flags --pretty --source-map --noinline))
-  (libraries js_of_ocaml))
+ (name hello_ocaml_lib)
+ (public_name hello-ocaml.lib)
+ (js_of_ocaml
+  (flags --pretty --source-map))
+ (libraries js_of_ocaml))

@@ -7,4 +7,4 @@
 (generate_opam_files true)
 
 (formatting
- (enabled_for reason ocaml))
+ (enabled_for ocaml))

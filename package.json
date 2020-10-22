@@ -6,7 +6,7 @@
   "esy": {
     "build": "dune build -p #{self.name}",
     "release": {
-      "bin": "hello",
+      "bin": "hello.bc.js",
       "includePackages": [
         "root",
         "@opam/camomile"
@@ -17,17 +17,16 @@
     "test": "esy x hello"
   },
   "dependencies": {
-    "@opam/containers": "2.8.1",
+    "@opam/containers": "3.0.1",
     "@opam/gen_js_api": "1.0.6",
-    "@opam/dune": "2.7.0",
-    "@opam/js_of_ocaml": "3.7.0",
-    "@opam/js_of_ocaml-ppx": "3.7.0",
+    "@opam/dune": "2.7.1",
+    "@opam/js_of_ocaml": "3.7.1",
+    "@opam/js_of_ocaml-ppx": "3.7.1",
     "@opam/js_of_ocaml-compiler": "3.7.1",
-    "@reason-native/console": "0.1.0",
-    "ocaml": "~4.10.0"
+    "ocaml": "4.11.1000"
   },
   "devDependencies": {
     "@opam/merlin": "^3.0.3",
-    "ocaml": "~4.10.0"
+    "ocaml": "4.11.1000"
   }
 }

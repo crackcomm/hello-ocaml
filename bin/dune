@@ -1,15 +1,22 @@
 (executable
-  (name hello)
-  (libraries gen_js_api js_of_ocaml console.lib hello-ocaml.lib)
-  (link_flags -no-check-prims)
-  (modules hello window)
-  (js_of_ocaml
-    (flags --pretty --source-map --noinline))
-  (preprocess
-    (pps gen_js_api.ppx js_of_ocaml-ppx))
-  (modes js))
+ (name hello)
+ (libraries gen_js_api js_of_ocaml hello-ocaml.lib)
+ (link_flags -no-check-prims)
+ (modules hello window console)
+ (js_of_ocaml
+  (flags --pretty --source-map))
+ (preprocess
+  (pps gen_js_api.ppx js_of_ocaml-ppx))
+ (modes js))
 
 (rule
-  (targets window.ml)
-  (deps window.mli)
-  (action (run %{bin:gen_js_api} %{deps})))
+ (targets console.ml)
+ (deps console.mli)
+ (action
+  (run %{bin:gen_js_api} %{deps})))
+
+(rule
+ (targets window.ml)
+ (deps window.mli)
+ (action
+  (run %{bin:gen_js_api} %{deps})))
